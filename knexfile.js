@@ -6,6 +6,7 @@ module.exports = {
     host: "localhost",
     database: "spgchallenge",
     charset: "utf8",
-    pool: { min: 0, max: 50 }
+    pool: { min: 0, max: 50 },
+    debug:true
   }
 };

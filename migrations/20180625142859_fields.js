@@ -1,7 +1,10 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("fields", function(table) {
-    table.string("id").primary();
-    table.string("name");
+    table.increments("id").primary();
+    table.string("name").notNullable().unique();
+    table.string('type').notNullable();
+    table.string('pattern');
+    table.boolean('required').default(false);
   });
 };
 

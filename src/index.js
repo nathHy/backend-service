@@ -15,8 +15,5 @@ Object.keys(routes).forEach(router => {
   app.use(routes[router]);
 })
 
-app.get("/fields", (req, res) => {
-
-});
 
 app.listen(port, () => console.log("Example app listening on port " + port));

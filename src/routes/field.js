@@ -5,10 +5,7 @@ const Field = require('../models/field');
 const wrapFunc = func => (req, res, next) => {
   const { body, params } = req;
   return func({ body, params })
-    .then(d => {
-      console.log("DATA IS",d);
-      res.json(d)
-    })
+    .then(res.json)
     .catch(next);
 }
 
